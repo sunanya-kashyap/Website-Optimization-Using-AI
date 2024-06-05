@@ -1,0 +1,79 @@
+<!-- ======= Header ======= -->
+<header id="header" class="header fixed-top d-flex align-items-center bg-dark">
+  <div class="container-fluid d-flex align-items-center justify-content-between">
+
+    <a href="/" class="logo d-flex align-items-center">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      <!-- <img src="/static/img/logo.png" alt=""> -->
+      <h1>Website Optimization Using AI</h1>
+    </a>
+
+    <style>
+      .navmenu a {
+        font-size: 20px;
+        /* Adjust as needed */
+      }
+    </style>
+
+    <!-- Nav Menu -->
+    <nav id="navmenu" class="navmenu px-3">
+      <ul>
+        <li>
+          <a href="{% url 'home' %}">
+            <i class="fas fa-home"></i> &nbsp;
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'about' %}">
+            <i class="fas fa-info-circle"></i> &nbsp;
+            About
+          </a>
+        </li>
+        {% if user.is_authenticated %}
+        <li>
+          <a href="{% url 'dashboard' %}">
+            <i class="fas fa-tachometer-alt"></i> &nbsp;
+            Dashboard
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'Addwebsite' %}">
+            <i class="fas fa-plus-circle"></i> &nbsp; Add
+          </a>
+        </li>
+        {% endif %}
+        <li>
+          <a href="{% url 'contact' %}">
+            <i class="fas fa-envelope"></i> &nbsp;
+            Contact
+          </a>
+        </li>
+        {% if user.is_authenticated %}
+        <li>
+          <a href="{% url 'logout' %}">
+            <i class="fas fa-sign-out-alt"></i> &nbsp;
+            Logout
+          </a>
+        </li>
+        {% else %}
+        <li>
+          <a href="{% url 'login' %}">
+            <i class="fas fa-sign-in-alt"></i> &nbsp;
+            Login
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'register' %}">
+            <i class="fas fa-user-plus"></i> &nbsp;
+            Register
+          </a>
+        </li>
+        {% endif %}
+      </ul>
+
+      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </nav><!-- End Nav Menu -->
+
+  </div>
+</header><!-- End Header -->

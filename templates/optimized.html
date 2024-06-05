@@ -1,0 +1,56 @@
+{% extends 'base/master.html' %}
+
+{% block content %}
+
+
+<section>
+    <div class="container mt-5">
+    <header>
+        <h1><strong>Optimized Websites</strong></h1>
+    </header>
+    <main>
+        <div class="d-flex justify-content-end">
+            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#downloadModal">
+                Optimized Files
+            </button>
+        </div>
+        <!-- Download Confirmation Modal -->
+        <div class="modal fade" id="downloadModal" tabindex="-1" aria-labelledby="downloadModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="downloadModalLabel">Confirm Download</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Are you sure you want to download all optimized files?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">No</button>
+                        <a href="{% url 'download_files' %}" class="btn btn-dark" download>Yes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+            <table class="table mb-5">
+                <thead>
+                    <tr>
+                        <th scope="col">Website Name</th>
+                        <th scope="col">Website URL</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for file in files %}
+                    <tr>
+                        <li>{{file.file.url}}</li>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </main>
+    </div>
+</section>
+
+{% endblock %}

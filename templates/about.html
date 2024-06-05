@@ -1,0 +1,40 @@
+{% extends 'base/master.html' %}
+<style>
+    #about {
+        background-color: #f8f8f8;
+        margin-top: 120px !important;
+    }
+    .video1{
+        height: 500px;
+        border-radius: 1rem;
+        box-shadow: 1px 1px 1px #8e8d8d;
+     }
+</style>
+{% block content %}
+<!-- About Section - Home Page -->
+<section id="about" class="about">
+
+    <div class="container mt-5" data-aos="fade-up" data-aos-delay="100">
+        <div class="row align-items-xl-center gy-5">
+
+            <div class="col-xl-7 content justify-content-center">
+                <h3>About Us</h3>
+                <h2>WEBTO</h2>
+                <p>Our AI-powered website optimization service is designed to enhance the performance and user
+                    experience of your website. By leveraging advanced AI algorithms, we automate routine maintenance
+                    tasks, continuously monitor website performance, and personalize user experiences.</p>
+                <a href="{% url 'home' %}" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+            </div>
+
+            <div class="col-xl-4 p-5 shadow-lg">
+                    <video class="img-fluid video1" autoplay muted loop>
+                        <source src="/static/img/video.mp4" type="video/mp4"/>
+                    </video>
+            </div>
+
+        </div>
+    </div>
+
+</section><!-- End About Section -->
+
+{% endblock content %}

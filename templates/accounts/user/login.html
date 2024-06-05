@@ -1,0 +1,86 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Login</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            background: url('{% static "img/blurr.jpeg" %}') no-repeat center center fixed;
+            -webkit-background-size: cover; 
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            
+        }
+
+        .card {
+            opacity: 0.9;
+            background-color: rgba(0, 0, 0,0); /* Transparent white */
+        }
+        .btn {
+          width: 25%;
+  }
+  input#username, input#password {
+    background-color: rgba(255, 255, 255, 0.5); /* Fully transparent */
+}
+
+    </style>
+</head>
+
+<body>
+    <section id="ab">
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-5 mt-5">
+                <div class="card shadow-lg border-0 rounded-lg mt-5 animate_animated animate_fadeIn">
+                    <div class="card-header"><h1 class="text-center text-dark font-weight-light my-4">Login</h1></div>
+                    <div class="card-body mt-2">
+                            <form method="post" action="{% url 'login' %}">
+                                {% csrf_token %}
+                                <div class="form-group mt-3 text-white">
+                                    <label for="username">Username</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text bg-transparent border-0" id="basic-addon1"><i class="fa fa-user fa-lg text-white"></i></span>
+                                        </div>
+                                    <input type="text" class="form-control" id="username" name="username" required>
+                                </div>
+                                <div class="form-group mt-3 text-white">
+                                    <label for="password">Password</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text bg-transparent border-0" id="basic-addon2"><i class="fa fa-lock fa-lg text-white"></i></span>
+                                        </div>
+                                    <input type="password" class="form-control" id="password" name="password" required>
+                                </div>
+                                <div class="form-group mt-3">
+                                    <input type="submit" class="btn btn-danger mt-3" value="Login">
+                               <div class="text-center mt-3 mb-4">
+                        <div class="small"><a href="{% url 'register' %}" class="text-danger"><h6>Need an account? Register!</h6></a></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+
+</html>

@@ -1,0 +1,317 @@
+{% extends 'base/master.html' %}
+{% load static %}
+
+
+
+{% block content %}
+   <!-- Hero Section - Home Page -->
+   <section id="hero" class="hero">
+
+    <img src="/static/img/frooont.jpeg" alt="" data-aos="fade-in">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10">
+          <h2 data-aos="fade-up" data-aos-delay="100">Welcome to Our Website</h2>
+          
+        </div>
+        <div class="col-lg-5">
+          <form action="#" class="sign-up-form d-flex" data-aos="fade-up" data-aos-delay="300">
+            <input type="text" class="form-control" placeholder="Enter email address">
+            <a href="{% url 'register' %}">
+              <input type="button" class="btn btn-danger" value="Get Started" >
+            </a>
+          </form>
+      </div>
+    </div>
+
+  </section><!-- End Hero Section -->
+  
+  <!-- Services Section - Home Page -->
+  <section id="services" class="services">
+
+    <!--  Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Services</h2>
+    </div><!-- End Section Title -->
+
+    <div class="container">
+
+      <div class="row gy-4">
+
+        <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="100">
+          <div class="service-item d-flex">
+            <div class="icon flex-shrink-0"><i class="bi bi-speedometer2"></i></div>
+            <div>
+              <h4 class="title"><a href="" class="stretched-link">Performance Optimization</a></h4>
+              <p class="description">Utilize AI algorithms to optimize website loading times 
+                and improve server response times by analyzing and optimizing server configurations.</p>
+            </div>
+          </div>
+        </div>
+        <!-- End Service Item -->
+
+        <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="200">
+          <div class="service-item d-flex">
+            <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
+            <div>
+              <h4 class="title"><a href="" class="stretched-link">Conversion Rate</a></h4>
+              <p class="description">Conduct AI-driven A/B tests to optimize website elements such as layouts, 
+                calls-to-action, and forms for maximum conversion rates</p>
+            </div>
+          </div>
+        </div><!-- End Service Item -->
+
+        <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="300">
+          <div class="service-item d-flex">
+            <div class="icon flex-shrink-0"><i class="bi bi-file-earmark-text"></i></div>
+            <div>
+              <h4 class="title"><a href="" class="stretched-link">Content optimization</a></h4>
+              <p class="description">Optimize images and videos on the website using AI techniques such as compression, resizing,
+                 and  format conversion to improve loading times and readability.</p>
+            </div>
+          </div>
+        </div><!-- End Service Item -->
+
+        <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="400">
+          <div class="service-item d-flex">
+            <div class="icon flex-shrink-0"><i class="bi bi-binoculars"></i></div>
+            <div>
+              <h4 class="title"><a href="" class="stretched-link">Continuous Monitoring and Maintenance</a></h4>
+              <p class="description">Monitoring tools and receive alerts for potential issues or bottlenecks and Automate
+                 routine maintenance tasks such as software updates, and database optimizations using AI-driven scripts and algorithms.</p>
+            </div>
+          </div>
+        </div><!-- End Service Item -->
+
+        <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="500">
+          <div class="service-item d-flex">
+            <div class="icon flex-shrink-0"><i class="bi bi-hand-thumbs-up"></i></div>
+            <div>
+              <h4 class="title"><a href="" class="stretched-link">User Engagement</a></h4>
+              <p class="description">Create personalized user experiences using AI to tailor content, recommendations,
+                 and interactions based on user behavior and preferences.</p>
+            </div>
+          </div>
+        </div><!-- End Service Item -->
+
+        <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="600">
+          <div class="service-item d-flex">
+            <div class="icon flex-shrink-0"><i class="bi bi-headset"></i></div>
+            <div>
+              <h4 class="title"><a href="" class="stretched-link">Support and Consultation</a></h4>
+              <p class="description">mplement AI chatbots to provide instant support and assistance to website visitors, 
+                answering common queries and guiding users through the optimization process.</p>
+            </div>
+          </div>
+        </div><!-- End Service Item -->
+
+      </div>
+
+    </div>
+
+  </section><!-- End Services Section -->
+
+  <!-- Features Section - Home Page -->
+  <section id="features" class="features">
+
+    <!--  Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Features</h2>
+    </div><!-- End Section Title -->
+
+    <div class="container">
+
+      <div class="row gy-4 align-items-center features-item">
+        <div class="col-lg-5 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+          <h3>Dynamic Content Optimization</h3>
+          <p>
+            Utilize AI to dynamically optimize website content in 
+            real-time based on factors such as user demographics, location, 
+            and browsing history, ensuring relevant and compelling experiences for every visitor.
+          </p>
+          <a href="{% url 'about' %}" class="btn btn-get-started">Read More</a>
+        </div>
+        <div class="col-lg-7 order-1 order-lg-2 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
+          <div class="image-stack">
+            <img src="/static/img/dynamic2.jpg" alt="" class="stack-back">
+          </div>
+        </div>
+      </div><!-- Features Item -->
+
+      <div class="row gy-4 align-items-stretch justify-content-between features-item ">
+        <div class="col-lg-6 d-flex align-items-center features-img-bg" data-aos="zoom-out">
+          <img src="/static/img/smart11.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-5 d-flex justify-content-center flex-column" data-aos="fade-up">
+          <h3>Smart Search and Navigation</h3>
+          <p>Implement AI-powered search and navigation functionalities 
+            that understand user intent, offer relevant suggestions,
+             and adapt to user preferences over time, enhancing the overall browsing experience.</p>
+          
+          <a href="{% url 'about' %}" class="btn btn-get-started align-self-start">Read More</a>
+        </div>
+      </div><!-- Features Item -->
+
+    </div>
+
+  </section><!-- End Features Section -->
+
+  
+  <!-- Faq Section - Home Page -->
+  <section id="faq" class="faq">
+
+    <div class="container">
+
+      <div class="row gy-4">
+
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="content px-xl-5">
+            <h3><span>Related Asked </span><strong>Questions</strong></h3>
+
+          </div>
+        </div>
+
+        <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="faq-container">
+            <div class="faq-item faq-active">
+              <h3><span class="num">1.</span> <span>How AI-driven website optimization improve user experience?</span></h3>
+              <div class="faq-content">
+                <p>AI can analyze user behaviour data in real-time to personalize content, suggest revelant things and optimize website layout for better engagement.</p>
+              </div>
+              <i class="faq-toggle bi bi-chevron-right"></i>
+            </div><!-- End Faq item-->
+
+            <div class="faq-item">
+              <h3><span class="num">2.</span> <span>What are some AI-powered techniques for enhancing website performance?</span></h3>
+              <div class="faq-content">
+                <p>AI can be utilized for tasks such as image compression, caching optimization and predictive content loading. AI-driven algorithms can analyze user interactions to identify bottlenecks and optimize website speed & responsiveness</p>
+              </div>
+              <i class="faq-toggle bi bi-chevron-right"></i>
+            </div><!-- End Faq item-->
+
+            <div class="faq-item">
+              <h3><span class="num">3.</span> <span>How does AI contribute to improving website SEO?</span></h3>
+              <div class="faq-content">
+                <p>AI algorithms can analyze search engine trends, keyword performances, and user intent to recommend optimized content strategies. AI can help websites rank higher in search results and attract more organic traffic.</p>
+              </div>
+              <i class="faq-toggle bi bi-chevron-right"></i>
+            </div><!-- End Faq item-->
+
+            <div class="faq-item">
+              <h3><span class="num">4.</span> <span>What role does AI play in A/B Testings for website optimization?</span></h3>
+              <div class="faq-content">
+                <p>AI-powered A/B testings tools can automatically analyze user interactions and identify statistically significant variations. This allows websites to quickly iterate and optimize design elements, copywriting, and calls-to-action to improve conversion rates and user engagement.</p>
+              </div>
+              <i class="faq-toggle bi bi-chevron-right"></i>
+            </div><!-- End Faq item-->
+
+            <div class="faq-item">
+              <h3><span class="num">5.</span> <span>How AI-driven analytics improve websites conversion rates?</span></h3>
+              <div class="faq-content">
+                <p>AI can analyze vast amount of data to identify patterns and trends related to user behaviour, preferences and conversion paths. By understanding these insights, websites can personalize content, streamline navigation and optimize conversion funnels to maximize conversion rates.</p>
+              </div>
+              <i class="faq-toggle bi bi-chevron-right"></i>
+            </div><!-- End Faq item-->
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </section><!-- End Faq Section -->
+
+  
+<!-- Feedback Section - Home Page -->
+  <section id="Feedback" class="Feedback">
+
+    <!--  Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Feedback</h2>
+    </div><!-- End Section Title -->
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="row gy-4">
+
+        <div class="col-lg-6">
+
+          <div class="row gy-4">
+            <div class="col-md-6">
+              <div class="info-item" data-aos="fade" data-aos-delay="200">
+                <i class="bi bi-geo-alt"></i>
+                <h3>Address</h3>
+                <p>WorldWide</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="col-md-6">
+              <div class="info-item" data-aos="fade" data-aos-delay="300">
+                <i class="bi bi-telephone"></i>
+                <h3>Call Us</h3>
+                <p>+91 8536487587</p>
+                <p>+91 9548690367</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="col-md-6">
+              <div class="info-item" data-aos="fade" data-aos-delay="400">
+                <i class="bi bi-envelope"></i>
+                <h3>Email Us</h3>
+                <p>indu23@gmail.com</p>
+                <p>kashyap@gmail.com</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="col-md-6">
+              <div class="info-item" data-aos="fade" data-aos-delay="500">
+                <i class="bi bi-clock"></i>
+                <h3>Open Hours</h3>
+                <p>Monday - Friday</p>
+                <p>09:00AM - 05:00PM</p>
+              </div>
+            </div><!-- End Info Item -->
+
+          </div>
+
+        </div>
+        <div class="col-lg-5 ">
+          <div class="info-item" data-aos="fade" data-aos-delay="300">
+          <form action="Feedback.html" method="post">
+            {% csrf_token %}
+            <div class="row gy-4">
+
+              <div class="col-md-5">
+                <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+              </div>
+
+              <div class="col-md-5 ">
+                <input type="email" class="form-control" name="email" placeholder="Your Email"  required>
+              </div>
+
+              <div class="col-md-10">
+                <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+              </div>
+
+              <div class="col-md-10 text-center">
+               
+
+                <button class="btn btn-danger mt-3" button type="submit">Send Message</button>
+              </div>
+              </div>
+
+            </div>
+          </form>
+        </div><!-- End Feedback Form -->
+
+      </div>
+
+    </div>
+
+  </section><!-- End Feedback Section -->
+
+{% endblock content %}
+  

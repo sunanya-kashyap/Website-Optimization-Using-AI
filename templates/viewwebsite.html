@@ -1,0 +1,52 @@
+{% extends 'base/master.html' %}
+{% load static %}
+
+{% block title %}
+View Website
+{% endblock title %}
+
+{% block content %}
+  <section id="view-website ">
+    <div class="container mt-5">
+      <h1 class="text-center">Website Optimization Upload</h1>
+      <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="container">
+        <div class="col-lg-5 mb-3">
+          <label for="fileUpload" class="form-label">Upload File</label>
+          <input type="file" class="form-control" id="fileUpload" name="file">
+        </div>
+        <button type="submit" class="btn btn-primary">Optimize</button>
+        </div>
+      </form>
+      <table class="table mt-5">
+        <thead>
+          <tr>
+            <th scope="col">S.No</th>
+            <th scope="col">File Name</th>
+            <th scope="col">File Path</th>
+            <th scope="col">Status</th>
+            <th scope="col">Optimization Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Table data will be populated here -->
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <script>
+    document.getElementById('fileUpload').addEventListener('change', function() {
+      var fileName = this.files[0].name;
+      var tableBody = document.querySelector('#uploadTable tbody');
+      var newRow = tableBody.insertRow();
+      newRow.innerHTML = '<td>1</td><td>' + fileName + '</td><td>Pending</td><td></td>';
+  
+      // Simulate website optimization after a delay
+      setTimeout(function() {
+        newRow.cells[2].innerText = 'Completed';
+        newRow.cells[3].innerText = 'Optimization result goes here';
+      }, 5000);  // 5 seconds delay
+    });
+  </script>
+{% endblock %}
